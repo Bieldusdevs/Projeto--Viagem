@@ -18,10 +18,9 @@ function AnimatedPlane() {
   return (
     <group ref={planeRef}>
       {/* Body */}
-      <mesh castShadow>
-        <cylinder args={[0.2, 0.2, 2, 32]} rotation={[Math.PI / 2, 0, 0]}>
-          <meshStandardMaterial color="#ffffff" />
-        </cylinder>
+      <mesh castShadow rotation={[Math.PI / 2, 0, 0]}>
+        <cylinderGeometry args={[0.2, 0.2, 2, 32]} />
+        <meshStandardMaterial color="#ffffff" />
       </mesh>
       {/* Wings */}
       <mesh position={[0, 0, 0]} castShadow>
